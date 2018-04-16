@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "bill tracker server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidNAspesi/billTrackerServer.git"
+  },
+  "author": "David Aspesi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidNAspesi/billTrackerServer/issues"
+  },
+  "homepage": "https://github.com/DavidNAspesi/billTrackerServer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "knex": "^0.14.6",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.0",
+    "nodemon": "^1.17.3",
+    "supertest": "^3.0.0"
+  }
+}
