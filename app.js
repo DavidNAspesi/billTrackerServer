@@ -9,13 +9,10 @@ app.use(morgan("dev"))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get("/", (req, res) => {
-    knex("customers")
-        .select()
-        .then(customers => {
-            res.json({customers: customers})
-        })
-})
+const customers = require("./routes/customers")
+const bills = require("./routes/bills")
+app.use("/customers", customers)
+app.use("/bills", bills)
 
 app.use((request, response, next) => {
     response.status(404).send()
