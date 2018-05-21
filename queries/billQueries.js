@@ -17,14 +17,14 @@ function addBill(body) {
 
 function deleteBill(id) {
     return knex("bills")
-        .where("user_id", id)
+        .where("id", id)
         .del()
         .returning("*")
 }
 
 function changeBill(id, body) {
     return knex("bills")
-        .where("user_id", id)
+        .where("id", id)
         .update(body)
         .returning("*")
 }
