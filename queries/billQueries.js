@@ -7,6 +7,7 @@ function getAllBills() {
 function getBillById(id) {
    return knex("bills")
         .where("user_id", id)
+        .orderBy("due_date", "desc")
 }
 
 function addBill(body) {
